@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naeems task manager</title>
+</head>
+<body>
+
+    <p>My daily Tasks</p>
+    <input type="text" class="task"> 
+    <button onclick="myTask()">add</button>
+
+    <script>
+
+      function myTask(){
+
+        const TaskElement = document.querySelector('.task');
+
+        const taskValue = TaskElement.value;
+        console.log(taskValue);
+        
+        let myTasks=[''];
+        myTasks.push(taskValue);
+        console.log(myTasks);
+        TaskElement.value = "";
+       
+      }
+
+    </script>
+    
+</body>
+</html>
