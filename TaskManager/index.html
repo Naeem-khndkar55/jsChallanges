@@ -9,24 +9,40 @@
 
     <p>My daily Tasks</p>
     <input type="text" class="task"> 
-    <button onclick="myTask()">add</button>
+    <input type="date" class="task_date">
+    <button onclick="addTask()">add</button>
+    <div class="task_container"></div>
 
     <script>
-
-      function myTask(){
-
-        const TaskElement = document.querySelector('.task');
-
-        const taskValue = TaskElement.value;
-        console.log(taskValue);
+      
+      let Tasks = [];
+      function addTask(){
+        let taskInput = document.querySelector('.task');
+        let newTask = taskInput.value;
         
-        let myTasks=[''];
-        myTasks.push(taskValue);
-        console.log(myTasks);
-        TaskElement.value = "";
-       
-      }
+        taskInput.value = "";
 
+        let taskDate = document.querySelector('.task_date');
+        let deuDate = taskDate.value;
+        taskDate.value='';
+        Tasks.push(newTask + '  ' + deuDate);
+
+        render()
+      }
+      
+  function render(){
+    //reset 
+    document.querySelector('.task_container').innerHTML= '';
+    Tasks.forEach(function(taskTitle){
+       let element = document.createElement('div');
+       element.innerText=taskTitle;
+       let taskList= document.querySelector('.task_container')
+       taskList.appendChild(element);
+
+ });
+      
+  }
+ 
     </script>
     
 </body>
