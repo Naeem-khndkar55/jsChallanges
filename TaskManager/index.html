@@ -10,7 +10,8 @@
     <p>My daily Tasks</p>
     <input type="text" class="task"> 
     <input type="date" class="task_date">
-    <button onclick="addTask()">add</button>
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="">Delete Task</button>
     <div class="task_container"></div>
 
     <script>
@@ -29,7 +30,12 @@
 
         render()
       }
-      
+
+      function deletTask()
+      {
+
+        
+      }
   function render(){
     //reset 
     document.querySelector('.task_container').innerHTML= '';

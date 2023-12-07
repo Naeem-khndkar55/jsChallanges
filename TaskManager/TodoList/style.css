@@ -1,0 +1,123 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.main{
+
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg, #153677, #4e085f );
+    padding: 10px;
+}
+
+.to-do{
+    width: 100%;
+    max-width: 540px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  background-image: url(assets/todoimg.webp);
+  border-radius: 20px;
+}
+.to-do h2{
+     color: #4e085f;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size:  30px;
+    font-size:  50px;
+}
+.to-do  h2 img{
+
+ width: 30px;
+ margin-left: 10px;
+}
+.add-task{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    background: #efeef0;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+ #input-text{
+
+    flex: 1;
+    border: none;
+    outline: none;
+   padding: 20px;
+    background: #efeef0;
+
+   
+ }
+ #input-date{
+    background: transparent;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+
+    
+ }
+ .add{
+
+    border: none;
+    outline: none;
+    padding: 20px 25px;
+    background: #4e085f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+ }
+ .add:hover{
+
+    background: #7532b8;
+ }
+ .task_container p{
+
+    font-size:  17px;
+    padding: 12px 8px 12px 50px;
+    margin-top: 5px;
+    user-select: none;
+    color: #fff;
+    cursor: pointer;
+    background: #9158ca;
+    border-radius: 20px;
+    position: relative;
+ }
+
+ .task_container p::before{
+
+    content: " ";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10%;
+    background-image: url(assets/checked.webp);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+ }
+ .task_container p button{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    outline: none;
+    padding: 20px 20px;
+   
+    background-image: none;  
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 20px;
+ }
+ .task_container p button:hover{
+    background-image: url(assets/delete.webp);
+ }
+ 
